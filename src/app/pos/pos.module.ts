@@ -1,3 +1,4 @@
+import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +8,8 @@ import { PosComponent } from './pos/pos.component';
 @NgModule({
   imports: [
     CommonModule,
-    PosRoutingModule
+    PosRoutingModule,
+    MaterialModule
   ],
   declarations: [PosComponent]
 })

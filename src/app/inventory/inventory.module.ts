@@ -1,4 +1,3 @@
-import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { StockEntryComponent } from './stock-entry/stock-entry.component';
 import { InventoryHomeComponent } from './inventory-home/inventory-home.component';
 import { InventoryComponent } from './inventory.component';
+import { MaterialModule } from './../material.module';
 
 @NgModule({
   imports: [

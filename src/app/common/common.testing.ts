@@ -8,9 +8,12 @@ import { SecurityContext } from '@angular/platform-browser/src/security/dom_sani
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable, Subscription, of } from 'rxjs';
 import { MaterialModule } from '../material.module';
+import { UiService } from './ui.service';
+import { AuthService } from '../auth/auth.service';
+import { AuthServiceFake } from '../auth/auth.service.fake';
 
 const FAKE_SVGS = {
-  squeezer: '<svg><path id="squeezer" name="squeezer"></path></svg>',
+  lemon: '<svg><path id="lemon" name="lemon"></path></svg>',
 };
 
 export class ObservableMediaFake {
@@ -34,12 +37,12 @@ export class ObservableMediaFake {
 export class MatIconRegistryFake {
   _document = document;
   addSvgIcon(iconName: string, url: SafeResourceUrl): this {
-    // this.addSvgIcon('squeezer', 'squeezer.svg')
+    // this.addSvgIcon('lemon', 'lemon.svg')
     return this;
   }
 
   getNamedSvgIcon(name: string, namespace: string = ''): Observable<SVGElement> {
-    return of(this._svgElementFromString(FAKE_SVGS.squeezer));
+    return of(this._svgElementFromString(FAKE_SVGS.lemon));
   }
 
   private _svgElementFromString(str: string): SVGElement {
@@ -65,7 +68,8 @@ export class DomSanitizerFake {
 }
 
 export const commonTestingProviders: any[] = [
-  // intentionally left blank
+  { provide: AuthService, useClass: AuthServiceFake },
+  UiService,
 ];
 
 export const commonTestingModules: any[] = [

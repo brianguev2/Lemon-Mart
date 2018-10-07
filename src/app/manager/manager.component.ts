@@ -29,3 +29,4 @@ export class ManagerComponent implements OnInit {
 
   ngOnInit() {}
 }
+

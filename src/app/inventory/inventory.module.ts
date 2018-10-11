@@ -7,7 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { StockEntryComponent } from './stock-entry/stock-entry.component';
 import { InventoryHomeComponent } from './inventory-home/inventory-home.component';
 import { InventoryComponent } from './inventory.component';
-import { MaterialModule } from './../material.module';
+import { MaterialModule } from '../app-material.module';
 
 @NgModule({
   imports: [

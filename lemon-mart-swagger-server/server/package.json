@@ -16,6 +16,7 @@
     "connect": "^3.2.0",
     "cors": "^2.8.4",
     "js-yaml": "^3.3.0",
-    "swagger-tools": "0.10.1"
+    "swagger-tools": "0.10.1",
+    "ts-enum-util": "^3.1.0"
   }
 }

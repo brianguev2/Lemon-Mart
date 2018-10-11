@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './app-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { SimpleDialogComponent } from './common/simple-dialog/simple-dialog.component';
 import { AuthHttpInterceptor } from './auth/auth-http-interceptor';
 import { NavigationMenuComponent } from './user/navigation-menu/navigation-menu.component';
+import { SharedComponentModule } from './shared-component.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NavigationMenuComponent } from './user/navigation-menu/navigation-menu.
     HttpClientModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedComponentModule
   ],
   providers: [AuthService, UiService, AuthGuard,
     {
